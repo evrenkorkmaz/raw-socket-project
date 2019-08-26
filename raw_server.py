@@ -1,10 +1,10 @@
 import socket
 import sys
 import os
-s = socket.socket(socket.AF_INET, socket.SOCK_RAW,1)
-ip = ("127.0.0.1",3000)
+s = socket.socket(socket.AF_INET, socket.SOCK_RAW,1) #create a raw socket
+ip = ("127.0.0.1",3000) # local raw socket adress and port
 s.bind(ip)
-#rep = os.system("ping  "+ server_ip)
+
 print("Connecting..")
 while True:
     data = s.recv(1024)
